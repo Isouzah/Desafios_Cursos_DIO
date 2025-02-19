@@ -1,26 +1,22 @@
-class heroi {
-    constructor (nome, idade, classe)
-        this.nome = nome
-        this.idade = idade
-        this.classe = classe [guerreiro, mago, monge, ninja]
-        this.ataque={
-    switch(ataque){
-        case 'guerreiro':
-            ataque = espada
-            break
-        case 'mago':
-            ataque = magia
-            break
-        case 'monge':
-            ataque = artes marciais
-            break
-        case 'ninja':
-            ataque = shuriken
+class Heroi {
+    constructor (nome, idade, classe){
+        this.nome = nome;
+        this.idade = idade;
+        this.classe = classe;
+        this.ataque = '';
+    if (classe === "guerreiro"){
+        this.ataque = "espada";}
+    else if (classe === "mago"){
+        this.ataque = "magia";}
+    else if (classe === "monge"){
+        this.ataque = "artes marciais";}
+    else if (classe === "ninja"){
+        this.ataque = "shuriken";}
     }
-}
-    atacar(){
-        console.log(`O $this.nome atacou usando $ataque`)
-    }
-}
 
-let escolhido = new heroi (Aldebaran, 42, guerreiro)
+    atacar() {
+    console.log(`O ${this.nome} atacou usando ${this.ataque}`);
+    }
+}
+let escolhido = new Heroi ("Shura", 42, "espada");
+escolhido.atacar();
