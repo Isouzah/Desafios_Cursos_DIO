@@ -39,4 +39,11 @@ if numbers == True:
 if special_characters == True:
     possible_characters += string.punctuation
 
+def generator(lenght, possible_characters):
+    password = "".join(random.choice(possible_characters) 
+                       for _ in range(lenght))
+    return password
 
+print("Gerando senha...")
+password = generator(length, possible_characters)
+print(f"Sua senha é: {password}")
